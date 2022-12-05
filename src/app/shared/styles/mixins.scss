@@ -1,0 +1,13 @@
+@mixin flexCenterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin wrapperStyle {
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: white;
+}

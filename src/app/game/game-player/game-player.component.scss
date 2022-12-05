@@ -1,0 +1,19 @@
+@import "../../shared/styles/mixins.scss";
+
+:host {
+  @include wrapperStyle;
+  flex-direction: column;
+}
+
+p {
+  font-size: 2rem;
+}
+.character-attr-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.character-attr {
+  max-width: 40vw;
+  overflow-wrap: break-word;
+}

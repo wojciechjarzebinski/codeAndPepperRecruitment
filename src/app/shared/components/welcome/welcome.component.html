@@ -1,0 +1,42 @@
+<div class="welcome-container">
+  <p>
+    Hi My name is Wojtek and this is an application written by me as part of
+    recruitment process for Code & Pepper Company. Type names of two players to
+    start the game!
+  </p>
+  <span> </span>
+  <form [formGroup]="playersForm">
+    <mat-form-field>
+      <mat-label>First Player Name</mat-label>
+      <input
+        matInput
+        placeholder="First Player Name"
+        formControlName="firstName"
+      />
+      <mat-error *ngIf="playersForm.get('firstName')?.hasError">
+        Player Name should have at least 3 characters
+      </mat-error> </mat-form-field
+    ><mat-form-field>
+      <mat-label>Second Player Name</mat-label>
+      <input
+        matInput
+        placeholder="Second Player Name"
+        class="form-control"
+        formControlName="secondName"
+      />
+      <mat-error *ngIf="playersForm.get('secondName')?.hasError">
+        Player Name should have at least 3 characters
+      </mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      [disabled]="!playersForm.valid"
+      (click)="goToGame()"
+      aria-label="Go to game"
+    >
+      <mat-icon>sports_esports</mat-icon>
+      Go to game
+    </button>
+  </form>
+</div>

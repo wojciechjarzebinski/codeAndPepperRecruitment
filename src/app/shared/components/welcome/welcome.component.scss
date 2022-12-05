@@ -1,0 +1,23 @@
+@import "../../styles/mixins.scss";
+
+:host {
+  color: white;
+  @include flexCenterContainer;
+  flex-direction: column;
+}
+p {
+  padding: 1rem;
+}
+.welcome-container {
+  border: 1px solid black;
+  border-radius: 0.5em;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: lightslategrey;
+  opacity: 0.95;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}

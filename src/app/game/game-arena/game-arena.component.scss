@@ -1,0 +1,35 @@
+@import "../../shared//styles/mixins.scss";
+
+:host {
+  flex-direction: column;
+}
+
+.result-container {
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 3rem;
+  margin-top: 3vh;
+}
+
+.players-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  background-color: lightslategrey;
+}
+
+.player-manular-container {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+.gaming-container {
+  @include flexCenterContainer;
+}

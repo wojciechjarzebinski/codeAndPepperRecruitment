@@ -1,0 +1,8 @@
+<p>
+  Player <b>{{ playerName }}</b>
+</p>
+<div class="character-attr-container">
+  <div class="character-attr" *ngFor="let pair of characterData | forObject">
+    {{ pair[0] }} - {{ pair[1] }}
+  </div>
+</div>

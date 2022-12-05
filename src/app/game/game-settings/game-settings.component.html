@@ -1,0 +1,54 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Game settings </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="controls-wrapper">
+    <!-- Selection type -->
+    <div class="control">
+      <label>Character selection type:</label>
+      <mat-radio-group
+        [value]="characterSelectionType"
+        (change)="changeSelectionCharacterType($event)"
+      >
+        <mat-radio-button class="example-margin" value="random">
+          Random
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="manually">
+          Manually
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <!-- Character Type -->
+    <div class="control">
+      <label>Character type:</label>
+      <mat-radio-group
+        [value]="characterType"
+        (change)="changeCharacterType($event)"
+      >
+        <mat-radio-button class="example-margin" value="peoples">
+          Peoples
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="planets">
+          Planets
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="starships">
+          Starships
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="control">
+      <label>Game atribute: </label>
+      <mat-form-field appearance="fill">
+        <mat-select
+          required
+          [(ngModel)]="gameCharacterAttrValue"
+          (selectionChange)="changeGameCharacterAttributes()"
+        >
+          <mat-option *ngFor="let attr of attributesArr" [value]="attr">{{
+            attr
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</mat-expansion-panel>

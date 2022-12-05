@@ -1,0 +1,14 @@
+@import "../../styles/mixins.scss";
+
+:host {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+}
+
+.bad-route-container {
+  @include flexCenterContainer;
+  border-radius: 1rem;
+  background-color: lightslategray;
+  width: 80%;
+}

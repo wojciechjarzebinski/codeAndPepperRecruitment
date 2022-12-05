@@ -1,0 +1,23 @@
+:host {
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+
+.controls-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.control {
+  display: flex;
+  flex: 1;
+  background-color: lightslategrey;
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+label,
+mat-radio-group {
+  align-self: center;
+}
