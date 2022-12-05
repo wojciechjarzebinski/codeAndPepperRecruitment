@@ -1,5 +1,3 @@
-import { CheckGameConditionType } from "../../src/app/store/game/game.action-type";
-
 describe('Login by players names', () => {
     before(() => {
       cy.visit('');
