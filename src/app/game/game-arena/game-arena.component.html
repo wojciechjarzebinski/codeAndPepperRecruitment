@@ -1,51 +1,42 @@
 <div class="result-container">
-  <p>{{ result$ | async }}</p>
+  <p>{{result$ | async}}</p>
 </div>
-<div class="players-container" *ngIf="isRandomGame$ | async; else manualGame">
-  <app-game-player
-    [characterData]="firstPlayerCharacter$ | async"
-    [playerName]="firstPlayerName$ | async"
-  ></app-game-player>
-  <app-game-player
-    [characterData]="secoundPlayerCharacter$ | async"
-    [playerName]="secondPlayerName$ | async"
-  ></app-game-player>
+<div class="players-container" *ngIf="(isRandomGame$ | async); else manualGame">
+    <app-game-character
+      [characterData]="firstPlayerCharacter$ |async"
+      [playerName]="firstPlayerName$ | async"
+    ></app-game-character>
+    <app-game-character
+      [characterData]="secoundPlayerCharacter$ |async"
+      [playerName]="secondPlayerName$ | async"
+    ></app-game-character>
 </div>
 
 <ng-template #manualGame>
   <div class="players-container">
     <div class="player-manular-container">
       <mat-form-field appearance="fill">
-        <label>Select Character for {{ firstPlayerName$ | async }}</label>
-        <mat-select [(ngModel)]="selectedPlayer1" required>
-          <mat-option
-            *ngFor="let character of possibleCharacters$ | async"
-            [value]="character"
-            >{{ character.name }}</mat-option
-          >
+        <label>Select Character for {{firstPlayerName$ | async}}</label>
+        <mat-select [(ngModel)]="selectedPlayer1" required >
+          <mat-option  *ngFor="let character of possibleCharacters$ | async" [value]="character">{{character.name}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <app-game-player
-        [characterData]="firstPlayerCharacter$ | async"
-        [playerName]="firstPlayerName$ | async"
-      >
-      </app-game-player>
+      <app-game-character
+        [characterData]="firstPlayerCharacter$ |async"
+        [playerName]="firstPlayerName$ | async">
+      </app-game-character>
     </div>
     <div class="player-manular-container">
       <mat-form-field appearance="fill">
-        <label>Select Character for {{ secondPlayerName$ | async }}</label>
-        <mat-select [(ngModel)]="selectedPlayer2" required>
-          <mat-option
-            *ngFor="let character of possibleCharacters$ | async"
-            [value]="character"
-            >{{ character.name }}</mat-option
-          >
+        <label>Select Character for {{secondPlayerName$ | async}}</label>
+        <mat-select [(ngModel)]="selectedPlayer2" required >
+          <mat-option *ngFor="let character of possibleCharacters$ | async" [value]="character">{{character.name}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <app-game-player
-        [characterData]="secoundPlayerCharacter$ | async"
-        [playerName]="secondPlayerName$ | async"
-      ></app-game-player>
+      <app-game-character
+        [characterData]="secoundPlayerCharacter$ |async"
+        [playerName]="firstPlayerName$ | async"
+      ></app-game-character>
     </div>
   </div>
 </ng-template>
@@ -54,21 +45,15 @@
   <button
     [disabled]="!(possibleCharacters$ | async)?.length"
     (click)="triggerRandonGame()"
-    *ngIf="isRandomGame$ | async; else manualGameTrigger"
-    mat-raised-button
-    color="primary"
-  >
-    Trigger Random Game
-  </button>
+    *ngIf="(isRandomGame$ | async); else manualGameTrigger"
+    mat-raised-button color="primary"
+  >Trigger Random Game</button>
 </div>
 
 <ng-template #manualGameTrigger>
-  <button
+  <button 
     [disabled]="!(selectedPlayer1 && selectedPlayer2)"
     (click)="triggerManualGame()"
-    mat-raised-button
-    color="primary"
-  >
-    Trigger Manual Game
-  </button>
+    mat-raised-button color="primary"
+  >Trigger Manual Game</button>
 </ng-template>

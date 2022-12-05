@@ -3,6 +3,7 @@
 :host {
   @include wrapperStyle;
   flex-direction: column;
+  border-radius: $base-border-radius
 }
 
 p {

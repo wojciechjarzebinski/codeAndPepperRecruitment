@@ -1,4 +1,4 @@
-import { CoreDataI } from 'src/app/shared/services/api.interface';
+import { CoreDataI } from '../../shared/services/api.interface';
 import { DataI } from './game-data.interface';
 
 export const mapApiDataToState = <T>(data: CoreDataI[]): DataI<T>[] => {

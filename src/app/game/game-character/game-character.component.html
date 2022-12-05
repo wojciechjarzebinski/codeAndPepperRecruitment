@@ -1,0 +1,11 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Player <b>{{ playerName }}</b></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="character-attr" *ngFor="let attr of characterData | forObject">
+      {{ attr[0] }} - {{ attr[1] }}
+    </div>
+  </mat-card-content>
+</mat-card>

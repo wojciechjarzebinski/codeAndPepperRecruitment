@@ -3,8 +3,8 @@ import {
   CharacterSelectionType,
   CharacterType,
   GameCharacterAttributes,
-} from 'src/app/shared/models/game.enums';
-import { Game } from 'src/app/shared/models/game.interface';
+} from '../../shared/models/game.enums';
+import { Game } from '../../shared/models/game.interface';
 import {
   actionSetCharacterPlayerFirst,
   actionSetCharacterPlayerSecond,

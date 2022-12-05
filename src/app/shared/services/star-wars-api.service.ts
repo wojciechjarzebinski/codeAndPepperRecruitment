@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, of, throwError } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import {
   API_PEOPLE_URL,
   API_PLANETS_URL,

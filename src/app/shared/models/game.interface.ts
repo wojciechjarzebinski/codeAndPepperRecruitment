@@ -1,7 +1,7 @@
 import {
   CharacterSelectionType,
   CharacterType,
-} from 'src/app/shared/models/game.enums';
+} from '../../shared/models/game.enums';
 import { PersonI, PlanetI, StarshipI } from './characters.interface';
 
 export type CharacterDetails = PlanetI | PersonI | StarshipI | null;

@@ -7,10 +7,10 @@ import {
   PersonI,
   PlanetI,
   StarshipI,
-} from 'src/app/shared/models/characters.interface';
-import { CharacterType } from 'src/app/shared/models/game.enums';
-import { StarWarsApiService } from 'src/app/shared/services/star-wars-api.service';
-import { isEmptyTable } from 'src/app/shared/utils';
+} from '../../shared/models/characters.interface';
+import { CharacterType } from '../../shared/models/game.enums';
+import { StarWarsApiService } from '../../shared/services/star-wars-api.service';
+import { isEmptyTable } from '../../shared/utils/utils';
 import { SetGameCharacterType } from '../game/game.action-type';
 import { mapApiDataToState } from './data.adapter.utils';
 import {

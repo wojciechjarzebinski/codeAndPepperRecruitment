@@ -4,9 +4,9 @@ import { Action, select, Store } from '@ngrx/store';
 import { isNaN } from 'lodash';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, switchMap, withLatestFrom } from 'rxjs/operators';
-import { ErrorService } from 'src/app/shared/services/error.service';
-import { StarWarsApiService } from 'src/app/shared/services/star-wars-api.service';
-import { replaceGameAttibuteToApiValue } from 'src/app/shared/utils';
+import { ErrorService } from '../../shared/services/error.service';
+import { StarWarsApiService } from '../../shared/services/star-wars-api.service';
+import { replaceGameAttibuteToApiValue } from '../../shared/utils/utils';
 import { actionSetDataDetails } from '../game-data/game-data.actions';
 import {
   CheckGameConditionType,

@@ -4,8 +4,8 @@ import {
   CharacterSelectionType,
   CharacterType,
   GameCharacterAttributes,
-} from 'src/app/shared/models/game.enums';
-import { GameCommand } from 'src/app/store/game.command';
+} from '../../shared/models/game.enums';
+import { GameCommand } from '../../store/game.command';
 
 @Component({
   selector: 'app-game-settings',
@@ -14,8 +14,7 @@ import { GameCommand } from 'src/app/store/game.command';
 })
 export class GameSettingsComponent {
   public characterType: string = CharacterType.peoples;
-  public attributesArr: string[] =
-    GameCharacterAttributes[CharacterType.peoples];
+  public attributesArr: string[] = GameCharacterAttributes[CharacterType.peoples];
   public characterSelectionType: string = CharacterSelectionType.random;
   public gameCharacterAttrValue: string = this.attributesArr[0];
 

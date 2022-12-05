@@ -1,5 +1,5 @@
-import { CharacterSelectionType } from './models/game.enums';
-import { Game } from './models/game.interface';
+import { CharacterSelectionType } from '../models/game.enums';
+import { Game } from '../models/game.interface';
 
 export const isEmptyTable = <T>(tab: T[]) => tab.length === 0;
 

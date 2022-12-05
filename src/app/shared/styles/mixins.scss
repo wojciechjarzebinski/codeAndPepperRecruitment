@@ -1,3 +1,6 @@
+$base-bg-color: lightslategrey;
+$base-border-radius: 0.5rem;
+
 @mixin flexCenterContainer {
   display: flex;
   align-items: center;
@@ -11,3 +14,5 @@
   margin: 1rem;
   background-color: white;
 }
+
+

@@ -2,12 +2,12 @@ import { createSelector, MemoizedSelector } from '@ngrx/store';
 import {
   CharacterSelectionType,
   CharacterType,
-} from 'src/app/shared/models/game.enums';
+} from '../../shared/models/game.enums';
 import {
   CharacterDetails,
   Game,
   GameSettings,
-} from 'src/app/shared/models/game.interface';
+} from '../../shared/models/game.interface';
 import { GameAppState, selectAppState } from '../app.state';
 
 export const selectGameState: () => MemoizedSelector<GameAppState, Game> = () =>

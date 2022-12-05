@@ -3,8 +3,8 @@ import {
   PersonI,
   PlanetI,
   StarshipI,
-} from 'src/app/shared/models/characters.interface';
-import { CharacterType } from 'src/app/shared/models/game.enums';
+} from '../../shared/models/characters.interface';
+import { CharacterType } from '../../shared/models/game.enums';
 import { GameAppState, selectAppState } from '../app.state';
 import { selectCharacterType } from '../game/game.selector';
 import { DataI, GameData } from './game-data.interface';

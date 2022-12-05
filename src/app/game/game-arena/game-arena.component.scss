@@ -5,10 +5,8 @@
 }
 
 .result-container {
-  display: flex;
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-items: center;
+  @include flexCenterContainer;
+  border-radius: $base-border-radius
 }
 
 p {
@@ -20,8 +18,8 @@ p {
   display: flex;
   flex: 1;
   flex-direction: row;
-  border-radius: 0.5rem;
-  background-color: lightslategrey;
+  border-radius: $base-border-radius;
+  background-color: $base-bg-color;
 }
 
 .player-manular-container {

@@ -1,5 +1,5 @@
 import { PipeTransform, Pipe } from '@angular/core';
-import { isNull } from 'lodash';
+import { entries, isNull } from 'lodash';
 
 /**
  * Transform a literal object into array
@@ -13,6 +13,6 @@ export class ForObjectPipe implements PipeTransform {
     if (isNull(object)) {
       return [];
     }
-    return Object.entries(object);
+    return entries(object);
   }
 }

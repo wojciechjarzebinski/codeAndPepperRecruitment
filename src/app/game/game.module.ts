@@ -4,14 +4,15 @@ import { GameComponent } from './game.component';
 import { RouterModule, Routes } from '@angular/router';
 import { GameArenaComponent } from './game-arena/game-arena.component';
 import { GameSettingsComponent } from './game-settings/game-settings.component';
-import { GamePlayerComponent } from './game-player/game-player.component';
+import { GameCharacterComponent } from './game-character/game-character.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ForObjectPipe } from '../shared/for-object.pipe';
+import { ForObjectPipe } from '../shared/pipe/for-object.pipe';
 
 const routes: Routes = [{ path: '', component: GameComponent }];
 
@@ -20,6 +21,7 @@ const MATERIAL_MODULES = [
   MatRadioModule,
   MatSelectModule,
   MatButtonModule,
+  MatCardModule,
 ];
 
 @NgModule({
@@ -34,7 +36,7 @@ const MATERIAL_MODULES = [
     GameComponent,
     GameArenaComponent,
     GameSettingsComponent,
-    GamePlayerComponent,
+    GameCharacterComponent,
     ForObjectPipe,
   ],
 })

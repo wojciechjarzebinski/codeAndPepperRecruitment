@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 
 import { Router } from '@angular/router';
 import {
   FormControl,
   FormGroup,
-  ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { PlayersForm } from './welcome.interfaces';
-import { GameCommand } from 'src/app/store/game.command';
+import { GameCommand } from '../../../store/game.command';
 
 @Component({
   selector: 'app-welcome',

@@ -2,7 +2,7 @@ import {
   PersonI,
   PlanetI,
   StarshipI,
-} from 'src/app/shared/models/characters.interface';
+} from '../../shared/models/characters.interface';
 
 export interface GameData {
   peoples: DataI<PersonI>[];

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { isRandomGame, mapResultFromState } from 'src/app/shared/utils';
-import { DataI } from 'src/app/store/game-data/game-data.interface';
-import { GameQuery } from 'src/app/store/game.query';
+import { isRandomGame, mapResultFromState } from '../../shared/utils/utils';
+import { DataI } from '../../store/game-data/game-data.interface';
+import { GameQuery } from '../../store/game.query';
 import { sample } from 'lodash';
-import { GameCommand } from 'src/app/store/game.command';
-import { CharacterDetails } from 'src/app/shared/models/game.interface';
+import { GameCommand } from '../../store/game.command';
+import { CharacterDetails } from '../../shared/models/game.interface';
 
 @Component({
   selector: 'app-game-arena',

@@ -3,11 +3,11 @@ import {
   PersonI,
   PlanetI,
   StarshipI,
-} from 'src/app/shared/models/characters.interface';
+} from '../../shared/models/characters.interface';
 import {
   CharacterSelectionType,
   CharacterType,
-} from 'src/app/shared/models/game.enums';
+} from '../../shared/models/game.enums';
 import { DataI } from '../game-data/game-data.interface';
 import {
   CheckGameConditionType,
